@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="vecteezy_favourite-vector-icon-design_20901008.jpg">
+</head>
+<body>
+    <div class="container text-center">
+        <div class="page-content d-flex justify-content-center align-items-center flex-column">
+            <div class="page-title my-5 position-relative">
+                <h1 class="position-relative display-3 p-2">Bookmarker</h1>
+            </div>
+            <span class="icon-span fs-3"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></span>
+        </div>
+        <form class="my-3">
+            <div class="mb-3 text-start">
+                <label for="siteName" class="form-label fw-semibold fs-5"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name" oninput="validation(this)">
+                <div class="alert alert-danger p-2 my-2 d-none"><small>website name must be start with capital letter</small></div>
+              </div>
+            <div class="mb-3 text-start">
+                <label for="siteUrl" class="form-label fw-semibold fs-5"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input type="url" class="form-control" id="siteURL" placeholder="Website URL" oninput="validation(this)">
+                <div class="alert alert-danger p-2 my-2 d-none"><small>website url must be end with .com</small></div>
+            </div>
+            <button type="submit" class="btn btn-danger my-3 px-5 fs-5 py-2" id="addBtn">Submit</button>
+        </form>
+        <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tableRow">
+              
+            </tbody>
+          </table>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
