@@ -23,12 +23,12 @@
         <form class="my-3">
             <div class="mb-3 text-start">
                 <label for="siteName" class="form-label fw-semibold fs-5"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
-                <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name" oninput="validation(this)">
+                <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name" oninput="validation(this)" required>
                 <div class="alert alert-danger p-2 my-2 d-none"><small>website name must be start with capital letter</small></div>
               </div>
             <div class="mb-3 text-start">
                 <label for="siteUrl" class="form-label fw-semibold fs-5"><i class="fa-solid fa-link"></i> Site URL</label>
-                <input type="url" class="form-control" id="siteURL" placeholder="Website URL" oninput="validation(this)">
+                <input type="url" class="form-control" id="siteURL" placeholder="Website URL" oninput="validation(this)" required>
                 <div class="alert alert-danger p-2 my-2 d-none"><small>website url must be end with .com</small></div>
             </div>
             <button type="button" class="btn btn-danger my-3 px-5 fs-5 py-2" id="addBtn">Submit</button>
