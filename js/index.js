@@ -12,7 +12,6 @@ var tableRow = document.getElementById('tableRow')
 display()
 addBtn.onclick =function(){
     addSite()
-    clearForm()
 }
 function addSite() {
     if (validation(siteName)&&validation(siteURL)) {
@@ -23,6 +22,8 @@ function addSite() {
         myList.push(newSite)
         localStorage.setItem('table',JSON.stringify(myList))
         display()
+        
+    clearForm()
     }
 }
 function clearForm() {
