@@ -48,7 +48,7 @@ function display() {
 function visitObj(index) {
     var url=myList[index].sURL;
     if (url) {
-        window.open("https://www."+url,'_blank')
+        window.open(url,'_blank')
         console.log(url);
     }
     else{
@@ -65,7 +65,7 @@ function deleteObj(index) {
 function validation(ele) {
     var Regex = {
         siteName : /^[A-Z](\w|-|\s){1,20}$/,
-        siteURL : /(.com)$/
+        siteURL : /^(ftp|http|https):\/\/[^ "]+$/
     }
     if(Regex[ele.id].test(ele.value)){
         ele.classList.add('is-valid')
