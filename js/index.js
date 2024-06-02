@@ -65,7 +65,7 @@ function deleteObj(index) {
 function validation(ele) {
     var Regex = {
         siteName : /^[A-Z](\w|-|\s){1,20}$/,
-        siteURL : /^(ftp|http|https):\/\/[^ "]+$/
+        siteURL : /^ftp|http|https):\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
     }
     if(Regex[ele.id].test(ele.value)){
         ele.classList.add('is-valid')
